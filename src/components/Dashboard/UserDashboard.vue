@@ -1,5 +1,8 @@
 <template>
   <div class="container">
+    <h2 class="title">
+      TB#14 1.X Nikon D5600
+    </h2>
     <CameraStatus/>
     <Dropdown/>
     <div class="dateRangePicker">
@@ -35,5 +38,10 @@ import DashboardGraphs from "@/components/Dashboard/Graphs/DashboardGraphs.vue";
   border-bottom-style: solid;
   border-bottom-width: 0.5px;
   border-color: lightgrey;
+}
+
+.title {
+  display: flex;
+  justify-content: start;
 }
 </style>
