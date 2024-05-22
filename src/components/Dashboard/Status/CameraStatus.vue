@@ -5,16 +5,18 @@
         <Card class="imageCard">
           <template #content>
             <div class="imageContainer">
-              <div class="cameraLocation">
-                <i class="pi pi-map-marker" style="font-size: 16px; color: white; margin-right: 2px"></i>
-                Australia/Melbourne
-              </div>
               <img src="/sentinel.jpeg" class="w-full h-full bg-cover"/>
-              <div class="takenAt">Uploaded May 22, 2024 - 3:00 pm</div>
-              <i class="pi pi-cloud-upload"
-                 style="position: absolute; font-size: 16px; bottom: 10px; right: 30px; color: white"></i>
-              <i class="pi pi-wifi"
-                 style="position: absolute; font-size: 16px; bottom: 10px; right: 10px; color: red"></i>
+              <div class="gradientOverlay">
+                <div class="cameraLocation">
+                  <i class="pi pi-map-marker" style="font-size: 16px; color: white; margin-right: 2px"></i>
+                  Australia/Melbourne
+                </div>
+                <div class="takenAt">Uploaded May 22, 2024 - 3:00 pm</div>
+                <i class="pi pi-cloud-upload"
+                   style="position: absolute; font-size: 16px; bottom: 10px; right: 30px; color: white"></i>
+                <i class="pi pi-wifi"
+                   style="position: absolute; font-size: 16px; bottom: 10px; right: 10px; color: red"></i>
+              </div>
             </div>
           </template>
         </Card>
@@ -42,7 +44,7 @@
                 <div class="labelTitle">
                   Estimated Next Contact
                 </div>
-                <div class="text-orange-500">
+                <div>
                   May 5, 2024 - 5:50 pm
                 </div>
               </div>
@@ -82,7 +84,7 @@
                 <div class="labelTitle">
                   Firmware Version
                 </div>
-                <div class="text-orange-500">
+                <div>
                   APEX-dev-3.1.0-422
                 </div>
               </div>
@@ -132,7 +134,7 @@
                 <div class="labelTitle">
                   External Drive Free Space
                 </div>
-                <div class="text-orange-500">
+                <div>
                   426.005 GiB
                 </div>
               </div>
@@ -173,6 +175,7 @@ import Card from 'primevue/card';
 }
 
 .imageCard {
+  padding: 0;
   position: relative;
   width: 100%;
   height: 260px;
@@ -184,6 +187,7 @@ import Card from 'primevue/card';
 .imageContainer {
   width: 100%; /* Set the width of the container */
   height: 260px; /* Set the height of the container */
+  border-radius: 22px;
 }
 
 .imageContainer img {
@@ -217,6 +221,16 @@ import Card from 'primevue/card';
   font-size: 12px;
   font-weight: bold;
   color: white;
+}
+
+.gradientOverlay {
+  height: 30%;
+  width: 100%;
+  //background: black;
+  position: absolute;
+  background-image: linear-gradient(to top, rgba(0, 0, 0, 0.7) 50%, transparent);
+  border-radius: 22px;
+  top: 180px;
 }
 
 </style>

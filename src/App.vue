@@ -16,6 +16,7 @@ export default {
 <style>
 @import '~primeflex/primeflex.css';
 @import 'primeicons/primeicons.css';
+@import 'primevue/resources/themes/aura-light-green/theme.css';
 
 html {
   background-color: #f6f6f6;
@@ -27,6 +28,9 @@ html {
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   margin-top: 60px;
+}
 
+.p-card .p-card-body {
+  padding: 0;
 }
 </style>

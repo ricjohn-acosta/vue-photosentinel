@@ -3,10 +3,11 @@
     <CameraStatus/>
     <Dropdown/>
     <div class="dateRangePicker">
-      <div class="flex justify-content-start align-items-center pt-1">
-        Last 2 days: May 20 - May 23, 2024
-        <i class="pi pi-chevron-down" style="font-size: 16px; margin-left: 6px; color: #0000bd"></i>
-      </div>
+      <SplitButton label="Last 2 days: May 20 - May 23, 2024" text severity="secondary"></SplitButton>
+<!--      <div class="flex justify-content-start align-items-center pt-1">-->
+<!--        Last 2 days: May 20 - May 23, 2024-->
+<!--        <i class="pi pi-chevron-down" style="font-size: 16px; margin-left: 6px; color: #0000bd"></i>-->
+<!--      </div>-->
     </div>
     <EventLogs/>
     <DashboardGraphs/>
@@ -14,6 +15,7 @@
 </template>
 
 <script setup>
+import SplitButton from 'primevue/splitbutton';
 import CameraStatus from './Status/CameraStatus.vue'
 import EventLogs from './Logs/EventLogs.vue'
 import DashboardGraphs from "@/components/Dashboard/Graphs/DashboardGraphs.vue";
